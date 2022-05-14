@@ -2,10 +2,9 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
-
-import model.entities.AbstractShape;
 import model.entities.Circle;
 import model.entities.Rectangle;
+import model.entities.Shape;
 import model.enums.Color;
 
 public class Program {
@@ -22,14 +21,15 @@ public class Program {
 				System.out.print("Erro! Digite a cor corretamente!");
 		}while(!(TestColor(color)));
 		
-		System.out.println("\n\nEscolha sua figura:\n1 - Para Retangulo\n2 - Para Círculo");
+		System.out.println("\nEscolha sua figura:\n1 - Para Retangulo\n2 - Para Círculo");
 		System.out.print("opc:");
 		int opc=sc.nextInt();
 		
 		switch(opc){
 			case 1:
 				
-				AbstractShape shape;
+				
+				Shape shape;
 				System.out.print("Altura:");
 				double height=sc.nextDouble();
 				System.out.print("Largura:");
